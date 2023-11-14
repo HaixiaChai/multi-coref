@@ -1,6 +1,6 @@
 # Investigating Multilingual Coreference Resolution by Universal Annotations
 
-This repository contains the code and trained model from the paper ["Investigating Multilingual Coreference Resolution by Universal Annotations"].
+This repository contains the code and trained model from the paper ["Investigating Multilingual Coreference Resolution by Universal Annotations"](https://arxiv.org/pdf/2310.17734.pdf).
 
 ## Basic Setup
 Set up environment and data for training and evaluation:
@@ -20,6 +20,8 @@ Evaluate a model on the dev/test set:
 * Download the corresponding model directory and unzip it under `data_dir`
 * `python evaluate.py [config] [model_id] [gpu_id]`
     * e.g. Attended Antecedent:`python evaluate.py train_spanbert_large_ml0_d2 May08_12-38-29_58000 0`
+
+Download our [trained model](https://drive.google.com/file/d/1IGbSucxmekQrUQv6F81-NIfL5HPgYtmf/view?usp=sharing).
 
 ## Training
 `python run.py [config] [gpu_id]`
@@ -53,7 +55,14 @@ Some important configurations in [experiments.conf](experiments.conf):
 | german-potsdamcc | 44.9 |
 | english-parcor   | 48.5 |
 | russian          | 66.5 |
-
 | avg              | 54.6 |
 
 ## Citation
+```
+@article{chai2023investigating,
+  title={Investigating Multilingual Coreference Resolution by Universal Annotations},
+  author={Chai, Haixia and Strube, Michael},
+  journal={arXiv preprint arXiv:2310.17734},
+  year={2023}
+}
+```
